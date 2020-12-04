@@ -79,7 +79,7 @@ LPSC, Grenoble
 class: focus-slide, center
 # Goals for today's discussion
 
-.huge.center.bold[Open and reusable data products are valuable to everyone, especially you!]
+.huge.center.bold[Point out some of the ongoing work that you might be interested in]
 <br>
 <br>
 <br>
@@ -107,9 +107,28 @@ Provide constraints on models through setting best limits
 ]
 ]
 
-- The results of these analyses are .bold[data products] (plots, tables, likelihoods)
-- For these data products to be useful need to be .bold[shared] and .bold[reusable] with experiments and theory
-- Requires the data products to be archived, easily findable, and machine readable (and human understandable)
+- All require .bold[building statistical models] and .bold[fitting models] to data to perform statistical inference
+- Model complexity can be huge for complicated searches
+- **Problem:** Time to fit can be .bold[literally days]
+- .blue[Goal:] Empower analysts with fast fits and expressive models
+
+---
+# Autodifferntiability
+
+- Talk about all the autodiff stuff
+
+---
+# Take normal route through pyhf and likelihoods
+
+- pyhf it up
+- likelihood fits benefit from scaling across cores and autodiff
+
+---
+# Scalable
+
+- ServiceX
+- Deploying `pyhf`
+- Running GPU fits
 
 
 ---
