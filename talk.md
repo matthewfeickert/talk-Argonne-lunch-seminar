@@ -124,6 +124,136 @@ Provide constraints on models through setting best limits
 - likelihood fits benefit from scaling across cores and autodiff
 
 ---
+# HistFactory Model
+
+- A flexible probability density function (p.d.f.) template to build statistical models in high energy physics
+- Developed in 2011 during work that lead to the Higgs discovery [[CERN-OPEN-2012-016](http://inspirehep.net/record/1236448)]
+- Widely used by the HEP community for .bold[measurements of known physics] (Standard Model) and<br> .bold[searches for new physics] (beyond the Standard Model)
+
+.kol-2-5.center[
+.width-90[[![HIGG-2016-25](figures/HIGG-2016-25.png)](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/HIGG-2016-25/)]
+.bold[Standard Model]
+]
+.kol-3-5.center[
+.width-100[[![SUSY-2016-16](figures/SUSY-2016-16.png)](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/SUSY-2016-16/)]
+.bold[Beyond the Standard Model]
+]
+
+---
+# HistFactory Template
+
+$$
+f\left(\mathrm{data}\middle|\mathrm{parameters}\right) =  f\left(\vec{n}, \vec{a}\middle|\vec{\eta}, \vec{\chi}\right) = \color{blue}{\prod\_{c \\,\in\\, \textrm{channels}} \prod\_{b \\,\in\\, \textrm{bins}\_c} \textrm{Pois} \left(n\_{cb} \middle| \nu\_{cb}\left(\vec{\eta}, \vec{\chi}\right)\right)} \\,\color{red}{\prod\_{\chi \\,\in\\, \vec{\chi}} c\_{\chi} \left(a\_{\chi}\middle|\chi\right)}
+$$
+
+.bold[Use:] Multiple disjoint _channels_ (or regions) of binned distributions with multiple _samples_ contributing to each with additional (possibly shared) systematics between sample estimates
+
+.kol-1-2[
+.bold[Main pieces:]
+- .blue[Main Poisson p.d.f. for simultaneous measurement of multiple channels]
+- .katex[Event rates] $\nu\_{cb}$ (nominal rate $\nu\_{scb}^{0}$ with rate modifiers)
+- .red[Constraint p.d.f. (+ data) for "auxiliary measurements"]
+   - encode systematic uncertainties (e.g. normalization, shape)
+- $\vec{n}$: events, $\vec{a}$: auxiliary data, $\vec{\eta}$: unconstrained pars, $\vec{\chi}$: constrained pars
+]
+.kol-1-2[
+.center.width-100[[![SUSY-2016-16_annotated](figures/SUSY-2016-16.png)](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/SUSY-2016-16/)]
+.center[Example: .bold[Each bin] is separate (1-bin) _channel_,<br> each .bold[histogram] (color) is a _sample_ and share<br> a .bold[normalization systematic] uncertainty]
+]
+
+---
+# HistFactory Template
+
+$$
+f\left(\vec{n}, \vec{a}\middle|\vec{\eta}, \vec{\chi}\right) = \color{blue}{\prod\_{c \\,\in\\, \textrm{channels}} \prod\_{b \\,\in\\, \textrm{bins}\_c} \textrm{Pois} \left(n\_{cb} \middle| \nu\_{cb}\left(\vec{\eta}, \vec{\chi}\right)\right)} \\,\color{red}{\prod\_{\chi \\,\in\\, \vec{\chi}} c\_{\chi} \left(a\_{\chi}\middle|\chi\right)}
+$$
+
+Mathematical grammar for a simultaneous fit with
+
+- .blue[multiple "channels"] (analysis regions, (stacks of) histograms)
+- each region can have .blue[multiple bins]
+- coupled to a set of .red[constraint terms]
+
+.center[.bold[This is a _mathematical_ representation!] Nowhere is any software spec defined]
+.center[.bold[Until now] (2018), the only implementation of HistFactory has been in [`ROOT`](https://root.cern.ch/)]
+
+.bold[`pyhf`: HistFactory in pure Python]
+.center.width-70[[![pyhf_PyPI](figures/pyhf_PyPI.png)](https://pypi.org/project/pyhf/)]
+
+---
+# `pyhf`: HistFactory in pure Python
+<!--  -->
+.kol-1-2.width-95[
+- First non-ROOT implementation of the HistFactory p.d.f. template
+   - .width-40[[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1169739.svg)](https://doi.org/10.5281/zenodo.1169739)]
+- pure-Python library as second implementation of HistFactory
+  - [`$ pip install pyhf`](https://scikit-hep.org/pyhf/installation.html#install-from-pypi)
+  - No dependence on ROOT!
+]
+.kol-1-2.center.width-80[
+[![pyhf_logo](https://iris-hep.org/assets/logos/pyhf-logo.png)](https://scikit-hep.org/pyhf/)
+]
+<!--  -->
+.kol-1-1[
+- Open source tool for all of HEP
+   - [IRIS-HEP](https://iris-hep.org/projects/pyhf.html) supported Scikit-HEP project
+   - Used for reinterpretation in phenomenology paper (DOI: [10.1007/JHEP04(2019)144](https://inspirehep.net/record/1698425)) and `SModelS`
+   - Used in ATLAS SUSY groups and for internal pMSSM SUSY large scale reinterpretation
+   - Maybe your experiment too!
+]
+
+---
+# Machine Learning Frameworks for Computation
+
+.grid[
+.kol-2-3[
+- All numerical operations implemented in .bold[tensor backends] through an API of $n$-dimensional array operations
+- Using deep learning frameworks as computational backends allows for .bold[exploitation of auto differentiation (autograd) and GPU acceleration]
+- As huge buy in from industry we benefit for free as these frameworks are .bold[continually improved] by professional software engineers (physicists are not)
+
+.kol-1-2.center[
+.width-90[![scaling_hardware](figures/scaling_hardware_annotated.png)]
+]
+.kol-1-2[
+<br>
+- Show hardware acceleration giving .bold[order of magnitude speedup] for some models!
+- Improvements over traditional
+   - 10 hrs to 30 min; 20 min to 10 sec
+]
+]
+.kol-1-4.center[
+.width-85[![NumPy](figures/logos/NumPy_logo.svg)]
+.width-85[![PyTorch](figures/logos/Pytorch_logo.svg)]
+.width-85[![Tensorflow](figures/logos/TensorFlow_logo.svg)]
+
+<br>
+.width-50[![JAX](figures/logos/JAX_logo.png)]
+]
+]
+
+---
+# Automatic differentiation
+
+With tensor library backends gain access to _exact (higher order) derivatives_ &mdash; accuracy is only limited by floating point precision
+
+$$
+\frac{\partial L}{\partial \mu}, \frac{\partial L}{\partial \theta_{i}}
+$$
+
+.grid[
+.kol-1-2[
+.large[Exploit .bold[full gradient of the likelihood] with .bold[modern optimizers] to help speedup fit!]
+
+<br><br>
+.large[Gain this through the frameworks creating _computational directed acyclic graphs_ and then applying the chain rule (to the operations)]
+]
+.kol-1-2[
+.center.width-80[![DAG](figures/computational_graph.png)]
+]
+]
+
+
+---
 # Scalable
 
 - ServiceX
