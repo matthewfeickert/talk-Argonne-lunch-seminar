@@ -2,3 +2,4 @@ numpy~=1.19
 jax~=0.2
 jaxlib~=0.1
 matplotlib~=3.3
+pre-commit

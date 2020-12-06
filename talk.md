@@ -118,6 +118,16 @@ Provide constraints on models through setting best limits
 - Talk about all the autodiff stuff
 
 ---
+# Familiar example
+
+.huge.bold.center[Optimizing a cut for an analysis]
+
+---
+# Metadiff
+
+- Add slide on metadiff
+
+---
 # Take normal route through pyhf and likelihoods
 
 - pyhf it up
