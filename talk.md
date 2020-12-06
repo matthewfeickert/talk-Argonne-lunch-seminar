@@ -77,6 +77,12 @@ LPSC, Grenoble
 
 ---
 class: focus-slide, center
+# Reviewer Note
+
+.huge.bold[If you're reading this before 2020-12-08 these slides might get revised for better clarity, timing, and figure quality]
+
+---
+class: focus-slide, center
 # Goals for today's discussion
 
 .huge.center.bold[Point out some of the ongoing work that you might be interested in]
@@ -118,6 +124,7 @@ Provide constraints on models through setting best limits
 - Talk about all the autodiff stuff
 
 ---
+class: focus-slide, center
 # Familiar (toy) example
 
 .huge.bold.center[Optimizing a cut for an analysis]
