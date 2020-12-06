@@ -268,6 +268,79 @@ $$
 - Accelerating fitting (reducing time to insight (statistical inference)!)
 - [Analysis Systems](https://iris-hep.org/as.html) pipeline has beta infrastructure for the final statistical inference stages with [`pyhf`](https://scikit-hep.org/pyhf/) + [`cabinetry`](https://iris-hep.org/projects/cabinetry.html)
 
+---
+# Fitting as a Service with `pyhf`
+.kol-1-2[
+<br><br>
+- Want to leverage `pyhf` hardware accelerated backends at HPC sites for real analysis speedup
+   - Fitting time from hours to minutes
+- HTC not target, so deploy (fitting) Function as a Service (FaaS)
+   - Use API to deploy fits and return JSON output
+]
+.kol-1-2[
+.center.width-100[![carbon_pyhf_HVTWZ_3500_fit](figures/carbon_pyhf_HVTWZ_3500_fit.png)]
+.center[ATLAS workspace that takes over an hour on ROOT fit in under 2 minutes with `pyhf` on GPU]
+]
+
+---
+# Open fields of exploration
+
+.kol-1-2[
+<br>
+- Early days in exploring solutions to implementation of Fitting as a Service
+- Parallel explorations of what service and user API would look like
+- [funcX](https://funcx.readthedocs.io/en/latest/index.html) from [Globus Labs](https://labs.globus.org/projects/funcx.html)
+   - High-performance FaaS platform
+   - Allows users to register and then execute Python functions in "serverless supercomputing" workflow
+- [Knative](https://knative.dev/)
+   - [Well adopted](https://youtu.be/69OfdJ5BIzs) as a Serverless/FaaS solution on Kubernetes
+   - Deployment model promotes efficient resource usage and simplifies bursting
+]
+.kol-1-2[
+.center.width-100[![funcX-light](figures/funcX-light.png)]
+.center.width-60[![Knative_logo](figures/Knative_logo.png)]
+]
+
+---
+# Infrastructure Perspective
+
+.center.width-100[![infrastructure_perspective](figures/infrastructure_perspective.png)]
+<br>
+.center[Possible workflow for development (here for funcX) and end user experience]
+
+---
+# funcX
+.kol-1-2[
+- [Prototype workflow](https://github.com/BenGalewsky/fitting-as-a-service) for fitting models from `pyhf` pallet for [published ATLAS SUSY 1Lbb analysis](https://www.hepdata.net/record/ins1755298)
+   - Currently deployed on [Chicago River HPC cluster](https://indico.cern.ch/event/960587/contributions/4070332/)
+   - Example implementation of deployment model
+- Uses Python driver with globus for authentication
+- Have tested and are able to fit all models in analysis (125 signal patches) in just under 2 minutes 30 seconds
+   - .bold[N.B.] Wall time includes downloading `pyhf` pallet from HEPData, starting funcX, sending data to funcX, and fits
+- Currently CPU, but parallelization gives significant speedup
+ - For working prototype, this is already a win!
+- Investigating workflows for pseudoexperiment generation that benefit from hardware acceleration
+]
+.kol-1-2[
+.center.width-70[![carbon_FuncX_demo](figures/carbon_FuncX_demo.png)]
+]
+
+---
+# Knative + GPU Workloads
+- CERN colleagues built prototype scaling out from CERN to Google Cloud Platform (GCP)
+   - Especially interesting for GPUs/TPUs
+- Supports fast auto scaling of workloads (secs) and clusters (mins) to meet demand
+- Working on version that allows per second reporting instead of per script execution
+.grid[
+.kol-1-2[
+.center.width-100[![carbon_ricardo_yaml](figures/carbon_ricardo_yaml.png)]
+]
+.kol-1-2[
+.center.width-100[![GCP_cards_fit_time](figures/GCP_cards_fit_time.png)]
+.center[[Example toy fit](https://gist.github.com/lukasheinrich/494b68ccb48b9ba97499fc113fd2dbe5) run on all [available GCP cards](https://cloud.google.com/compute/docs/gpus)]
+]
+]
+
 
 ---
 class: end-slide, center
