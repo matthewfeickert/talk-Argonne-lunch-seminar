@@ -123,7 +123,11 @@ Provide constraints on models through setting best limits
 .huge.bold.center[Optimizing a cut for an analysis]
 
 ---
-# Familiar example
+# Discriminate signal and background
+
+- Counting experiment for presence of signal process
+- Place discriminate cut on observable $x$ to maximize significance
+   - Significance: $\sqrt{2 (S+B) \log(1 + \frac{S}{B})-2S}$ (for small $S/B$: significance $\to S/\sqrt{B}$)
 
 .kol-1-2.center[
 .width-100[![signal_background_shapes](figures/signal_background_shapes.png)]
@@ -131,6 +135,22 @@ Provide constraints on models through setting best limits
 .kol-1-2[
 .width-100[![signal_background_stacked](figures/signal_background_stacked.png)]
 ]
+
+---
+# Traditionally: Scan across cut values
+
+- Set baseline cut at $x=0$ (accept everything)
+- Step along cut values in $x$ and calculate significance at each cut. Keep maximum.
+
+.kol-1-2.center[
+.width-100[![signal_background_stacked](figures/signal_background_stacked.png)]
+]
+.kol-1-2[
+.width-100[![significance_cut_scan](figures/significance_cut_scan.png)]
+]
+
+.center[Significance: $\sqrt{2 (S+B) \log(1 + \frac{S}{B})-2S}$]
+
 
 ---
 # Metadiff
