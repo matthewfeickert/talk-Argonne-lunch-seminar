@@ -260,6 +260,14 @@ $$
 - Deploying `pyhf`
 - Running GPU fits
 
+---
+# Analysis Systems through lens of stat inference
+
+.center.width-80[![cabinetry_vertical_slice](figures/cabinetry-vertical-slice.png)]
+
+- Accelerating fitting (reducing time to insight (statistical inference)!)
+- [Analysis Systems](https://iris-hep.org/as.html) pipeline has beta infrastructure for the final statistical inference stages with [`pyhf`](https://scikit-hep.org/pyhf/) + [`cabinetry`](https://iris-hep.org/projects/cabinetry.html)
+
 
 ---
 class: end-slide, center
