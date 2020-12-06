@@ -34,9 +34,9 @@ CERN
 UCSC SCIPP
 ]
 .kol-1-3.center[
-.circle.width-35[![Kyle](figures/collaborators/cranmer.png)]
+.circle.width-40[![Alex](https://avatars1.githubusercontent.com/u/45009355)]
 
-[Kyle Cranmer](http://theoryandpractice.org/)
+[Alexander Held](https://github.com/alexander-held)
 
 NYU
 ]
