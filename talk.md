@@ -118,9 +118,19 @@ Provide constraints on models through setting best limits
 - Talk about all the autodiff stuff
 
 ---
-# Familiar example
+# Familiar (toy) example
 
 .huge.bold.center[Optimizing a cut for an analysis]
+
+---
+# Familiar example
+
+.kol-1-2.center[
+.width-100[![signal_background_shapes](figures/signal_background_shapes.png)]
+]
+.kol-1-2[
+.width-100[![signal_background_stacked](figures/signal_background_stacked.png)]
+]
 
 ---
 # Metadiff
