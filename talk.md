@@ -151,6 +151,37 @@ Provide constraints on models through setting best limits
 
 .center[Significance: $\sqrt{2 (S+B) \log(1 + \frac{S}{B})-2S}$]
 
+---
+# Differentiable approach
+
+<br>
+
+.kol-1-2[
+- Need differentiable analogue to non-differentiable cut
+- Weight events using activation function of sigmoid
+
+.center[$\left(1 + e^{-\alpha(x-c)}\right)^{-1}$]
+
+- $\alpha$ tunable parameter for steepness
+- Event far from cut: $w \to 0$
+- Event close to cut: $w \to 1$
+]
+.kol-1-2[
+.width-100[![sigmoid_event_weights](figures/sigmoid_event_weights.png)]
+]
+
+---
+# Compare hard cuts vs. differentiable
+
+- Words go here
+
+.kol-1-2.center[
+.width-100[![signal_background_stacked](figures/signal_background_stacked.png)]
+]
+.kol-1-2[
+.width-100[![significance_scan_compare](figures/significance_scan_compare.png)]
+]
+
 
 ---
 # Metadiff
