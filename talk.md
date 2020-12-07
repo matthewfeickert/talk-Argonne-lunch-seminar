@@ -547,17 +547,25 @@ class: focus-slide, center
 .center[Possible workflow for development (here for funcX) and end user experience]
 
 ---
-# funcX
+# Infrastructure Perspective
+
+.center.width-100[![infrastructure_perspective](figures/infrastructure_perspective.png)]
+<br>
+- funcX can be deployed to Kubernetes, HTCondor, SLURM, and most other popular HTC environments
+- Kubernetes assumes containers (containerd, Docker), but the other environments can just use conda or pip
+
+---
+# funcX example: Distributed fitting
 .kol-1-2[
 - [Prototype workflow](https://github.com/BenGalewsky/fitting-as-a-service) for fitting models from `pyhf` pallet for [published ATLAS SUSY 1Lbb analysis](https://www.hepdata.net/record/ins1755298)
    - Currently deployed on [Chicago River HPC cluster](https://indico.cern.ch/event/960587/contributions/4070332/)
    - Example implementation of deployment model
-- Uses Python driver with globus for authentication
-- Have tested and are able to fit all models in analysis (125 signal patches) in just under 2 minutes 30 seconds
+- Uses Python driver with Globus Auth Groups for authentication
+- Able to fit all models in analysis (125 signal patches) in just under 2 minutes 30 seconds
    - .bold[N.B.] Wall time includes downloading `pyhf` pallet from HEPData, starting funcX, sending data to funcX, and fits
 - Currently CPU, but parallelization gives significant speedup
  - For working prototype, this is already a win!
-- Investigating workflows for pseudoexperiment generation that benefit from hardware acceleration
+- Investigating GPU workflows for pseudoexperiment generation that benefit from hardware acceleration
 ]
 .kol-1-2[
 .center.width-70[![carbon_FuncX_demo](figures/carbon_FuncX_demo.png)]
