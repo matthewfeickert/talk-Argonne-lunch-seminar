@@ -547,6 +547,7 @@ ACTS
 
 ---
 # Knative + GPU Workloads
+
 - CERN colleagues built prototype scaling out from CERN to Google Cloud Platform (GCP)
    - Especially interesting for GPUs/TPUs
 - Supports fast auto scaling of workloads (secs) and clusters (mins) to meet demand
@@ -558,6 +559,22 @@ ACTS
 .kol-1-2[
 .center.width-100[![GCP_cards_fit_time](figures/GCP_cards_fit_time.png)]
 .center[[Example toy fit](https://gist.github.com/lukasheinrich/494b68ccb48b9ba97499fc113fd2dbe5) run on all [available GCP cards](https://cloud.google.com/compute/docs/gpus)]
+]
+]
+
+---
+# Knative + GPU Workloads
+
+- CERN colleagues built prototype scaling out from CERN to Google Cloud Platform (GCP)
+   - Especially interesting for GPUs/TPUs
+- Supports fast auto scaling of workloads (secs) and clusters (mins) to meet demand
+- Working on version that allows per second reporting instead of per script execution
+.grid[
+.kol-1-2[
+.center.width-100[![GCP_Azure_comparison_single_precision](figures/GCP_Azure_comparison_single_precision.png)]
+]
+.kol-1-2[
+.center.width-100[![GCP_Azure_comparison_double_precision](figures/GCP_Azure_comparison_double_precision.png)]
 ]
 ]
 
@@ -578,7 +595,7 @@ ACTS
 .width-45[![MLE_grad_map_full](figures/MLE_grad_map_full.png)]
 ]
 .kol-1-2.center[
-.width-45[![MLE_grad_map_full](figures/MLE_grad_map_full.png)]
+.width-60[![GCP_Azure_comparison_double_precision](figures/GCP_Azure_comparison_double_precision.png)]
 ]
 
 ---
