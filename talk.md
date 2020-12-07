@@ -499,8 +499,8 @@ TODO: Make this an animated GIF
 .kol-1-3[
 - .neos-orange[Background] and .neos-blue[signal] samples
    - Same colors for dist. / hist.
-- 3 regions are decision boundaries of NN output
-   - top left region $\to [0.67, 1.0]$ bin
+- 3 decision regions are mappings of NN output
+   - $[0.67, 1.0]$ bin $\to$ top left region
 ]
 .kol-1-3[
 - From KDE of NN output form 1 channel with 2 samples and 3 bins `pyhf` model
