@@ -122,7 +122,7 @@ Provide constraints on models through setting best limits
 # Automatic Differentiation
 
 .kol-3-5[
-- Provide gradients of numerical functions to machine precision
+- Automatic differentiation (autodiff) provides gradients of numerical functions to machine precision
 - Build computational graph of the calculation
 - Nodes represent operations, edges represent flow of gradients
 - Apply the chain rule to operations
@@ -141,6 +141,16 @@ TODO: Revise example with graphviz
 .kol-2-5.center[
 .width-100[[![autodiff_graph](figures/autodiff_graph.png)](https://indico.cern.ch/event/941278/contributions/4084835/)]
 ]
+
+---
+# Automatic Differentiation: Forward mode
+
+- Forward
+
+---
+# Automatic Differentiation: Reverse mode
+
+- Reverse
 
 ---
 # Differentiable Programming
@@ -468,11 +478,6 @@ ACTS
 ]
 
 ---
-# Metadiff
-
-- Add slide on metadiff
-
----
 # Scalable
 
 - ServiceX
@@ -578,23 +583,41 @@ ACTS
 ]
 
 ---
+# Metadiff
+
+.kol-1-3[
+- Real world high energy physics analyses have various challenges:
+   - Computations are very complex chains
+   - Not implementable in a single framework
+   - Asynchronous multi step procedures
+   - Strong need for distributed computing
+- "Metadiff" allows for passing of gradients .bold[between] different implementations and services
+- Possible solution to allow for distributed computations at scale exploiting gradients
+]
+.kol-2-3.center[
+.width-100[[![metadiff](figures/metadiff.png)](https://indico.cern.ch/event/960587/contributions/4070325/)]
+<br><br>
+Differentiating through PyTorch, JAX, and TensorFlow using FaaS
+]
+
+---
 # Summary
 
 - Automatic differentiation gives a powerful tool in the form of differentiable programming
-   - Exploitation of gradient for optimization
-   - End-to-end optimization of systems and analyses
+   - Exploitation of .bold[gradient for optimization]
+   - .bold[End-to-end optimization] of systems and analyses
 - Scalable workflows are a requirement for LHC scale analyses
-   - Distributed Functions as a Service offer powerful scaling
+   - Distributed .bold[Functions as a Service] offer powerful scaling
    - Heterogeneous architectures can be employed
    - Metadiff can allow for differentiating through systems using FaaS
 - Ongoing areas of rapid work in IRIS-HEP, gradhep, and CERN
-   - Growing ecosystem of work and tools
+   - Growing .bold[ecosystem] of work and tools
 
 .kol-1-2.center[
 .width-45[![MLE_grad_map_full](figures/MLE_grad_map_full.png)]
 ]
 .kol-1-2.center[
-.width-60[![GCP_Azure_comparison_double_precision](figures/GCP_Azure_comparison_double_precision.png)]
+.width-70[[![metadiff](figures/metadiff.png)](https://indico.cern.ch/event/960587/contributions/4070325/)]
 ]
 
 ---
