@@ -135,10 +135,12 @@ class: focus-slide, center
 - Place discriminate cut on observable $x$ to maximize significance
    - Significance: $\sqrt{2 (S+B) \log(1 + \frac{S}{B})-2S}$ (for small $S/B$: significance $\to S/\sqrt{B}$)
 
+.footnote[Example inspired by Alexander Held's [example of a differentiable analysis](https://github.com/alexander-held/differentiable-analysis-example/)]
+
 .kol-1-2.center[
 .width-100[![signal_background_shapes](figures/signal_background_shapes.png)]
 ]
-.kol-1-2[
+.kol-1-2.center[
 .width-100[![signal_background_stacked](figures/signal_background_stacked.png)]
 ]
 
