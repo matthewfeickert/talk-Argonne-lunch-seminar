@@ -463,7 +463,7 @@ neos
 <br><br>
 .width-100[[![MLE_grad_map_full](figures/Acts_autodiff_talk.png)](https://indico.cern.ch/event/941278/contributions/4084835/)]
 
-<br><br>
+<br><br><br>
 ACTS
 ]
 
