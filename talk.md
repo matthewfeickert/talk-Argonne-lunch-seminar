@@ -601,9 +601,9 @@ class: focus-slide, center
 
 .kol-1-3[
 - Real world high energy physics analyses have various challenges:
-   - Computations are very complex chains
+   - Computations highly complex chains
    - Not implementable in a single framework
-   - Asynchronous multi step procedures
+   - Asynchronous multi-step procedures
    - Strong need for distributed computing
 - "Metadiff" allows for passing of gradients .bold[between] different implementations and services
 - Possible solution to allow for distributed computations at scale exploiting gradients
