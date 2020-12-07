@@ -283,12 +283,6 @@ class: focus-slide, center
 TODO: Make this an animated GIF
 ]
 
-
----
-# Metadiff
-
-- Add slide on metadiff
-
 ---
 class: focus-slide, center
 # Case study
@@ -472,6 +466,11 @@ neos
 <br><br>
 ACTS
 ]
+
+---
+# Metadiff
+
+- Add slide on metadiff
 
 ---
 # Scalable
