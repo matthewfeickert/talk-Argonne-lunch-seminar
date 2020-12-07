@@ -42,6 +42,14 @@ body {
     color: #009933;
 }
 
+.neos-orange {
+  color: #ff802c;
+}
+
+.neos-blue {
+  color: #00becd;
+}
+
 .italic {
     font-style: italic;
 }

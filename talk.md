@@ -478,8 +478,8 @@ TODO: Make this an animated GIF
    - Need smooth change compares to abrupt changes in binned yields
 <!-- - Make profile-likelihood differentiable with [fixed-point differentiation](https://implicit-layers-tutorial.org/implicit_functions/) -->
 - Samples fed into NN that produces observable (NN output) that can be binned.
-- Construct `pyhf` model with observable and perform inference to get $CL_s$ for POI.
-- Backpropagate the $CL_s$ to update weights for NN.
+- Construct `pyhf` model with observable and perform inference to get $\mathrm{CL}_{s}$ for POI.
+- Backpropagate the $\mathrm{CL}_{s}$ to update weights for NN.
 
 <br>
 .center.width-40[[![neos_logo](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/neos_logo.png)](https://github.com/gradhep/neos)]
@@ -497,10 +497,13 @@ TODO: Make this an animated GIF
 .center.width-100[[![neos_gif](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/pyhf_3.gif)](https://github.com/gradhep/neos)]
 
 .kol-1-3[
+- .neos-orange[Background] and .neos-blue[signal] samples
+   - Same colors for dist. / hist.
 - 3 regions are decision boundaries of NN output
-- 3 bins $\to$ 3 regions
+   - top left region $\to [0.67, 1.0]$ bin
 ]
 .kol-1-3[
+- From KDE of NN output form 1 channel with 2 samples and 3 bins `pyhf` model
 - $\mathrm{CL}_{s}$ value minimized as goal of NN
 ]
 .kol-1-3[
