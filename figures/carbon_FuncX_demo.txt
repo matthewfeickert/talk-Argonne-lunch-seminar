@@ -36,6 +36,6 @@ Task C1N2_Wh_hbb_900_250 complete, there are 124 results now
 --------------------
 ... skipping print of results
 
-real	2m27.249s
-user	0m12.273s
-sys	0m2.052s
+real	2m0.100s
+user	0m7.602s
+sys	0m1.720s

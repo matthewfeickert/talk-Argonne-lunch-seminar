@@ -475,7 +475,7 @@ TODO: Make this an animated GIF
 # New art: analysis as a differentiable program
 .kol-4-5[
 - Provide differentiable analogue to histograms with kernel density estimation or softmax
-- GIF: `neos` 3 bin observable optimized with systematics w.r.t. $\mathrm{CL}_{s}$
+- GIF: `neos` 3 bin observable with KDE optimized with systematics w.r.t. $\mathrm{CL}_{s}$
 ]
 .kol-1-5.center[
 .width-100[[![neos_logo](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/neos_logo.png)](https://github.com/gradhep/neos)]
@@ -578,7 +578,7 @@ class: focus-slide, center
    - Currently deployed on [Chicago River HPC cluster](https://indico.cern.ch/event/960587/contributions/4070332/)
    - Example implementation of deployment model
 - Uses Python driver with Globus Auth Groups for authentication
-- Able to fit all models in analysis (125 signal patches) in just under 2 minutes 30 seconds
+- Able to fit all models in analysis (125 signal patches) in just over .bold[2 minutes]
    - .bold[N.B.] Wall time includes downloading `pyhf` pallet from HEPData, starting funcX, sending data to funcX, and fits
 - Currently CPU, but parallelization gives significant speedup
  - For working prototype, this is already a win!
