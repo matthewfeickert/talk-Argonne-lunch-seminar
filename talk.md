@@ -274,10 +274,10 @@ TODO: Make this an animated GIF
 - Add slide on metadiff
 
 ---
-# Take normal route through pyhf and likelihoods
+class: focus-slide, center
+# Case study
 
-- pyhf it up
-- likelihood fits benefit from scaling across cores and autodiff
+.huge.bold.center[Application of autodiff in `pyhf`]
 
 ---
 # HistFactory Model
