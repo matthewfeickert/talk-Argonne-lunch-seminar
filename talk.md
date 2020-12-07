@@ -80,7 +80,7 @@ class: focus-slide, center
 
 .huge.bold[If you're reading this before 2020-12-08 these slides might get revised for better clarity, timing, and figure quality]
 
----
+<!-- ---
 class: focus-slide, center
 # Goals for today's discussion
 
@@ -88,7 +88,7 @@ class: focus-slide, center
 <br>
 <br>
 <br>
-.huge.center.bold[Show live (toy) example of how easy it can be to get started]
+.huge.center.bold[Show live (toy) example of how easy it can be to get started] -->
 
 ---
 # Goals of physics analysis at the LHC
@@ -117,6 +117,15 @@ Provide constraints on models through setting best limits
 - **Problem:** Time to fit can be .bold[literally days]
 - .blue[Goal:] Empower analysts with fast fits and expressive models
 
+
+---
+# Automatic Differentiation
+
+- Provide gradients of numerical functions to machine precision
+- Build computational graph of the calculation
+- Nodes represent operations, edges represent flow of gradients
+- Apply the chain rule to operations
+
 ---
 # Differentiable Programming
 
@@ -124,18 +133,19 @@ Provide constraints on models through setting best limits
 
 .grid[
 .kol-1-2[
-- Hello
+- Writing fully differentiable programs
+- Replace non-differentiable operations with differentiable analogues
+   - binning, sorting, cuts
+- Resulting system can be optimized end-to-end using efficient gradient-based optimization algorithms
+   - Exploit advances in deep learning
+- Enables .italic[efficient] computation of gradients and jacobians
+   - Large benefit to statistical inference
 ]
 .kol-1-2[
 .center.width-100[[![Snowmass_LOI](figures/Snowmass_LOI.png)](https://www.snowmass21.org/docs/files/summaries/CompF/SNOWMASS21-CompF5_CompF3_Gordon_Watts-046.pdf)]
 .center[[Snowmass 2021 LOI](https://www.snowmass21.org/docs/files/summaries/CompF/SNOWMASS21-CompF5_CompF3_Gordon_Watts-046.pdf)]
 ]
 ]
-
----
-# Autodifferntiability
-
-- Talk about all the autodiff stuff
 
 
 ---
@@ -397,6 +407,34 @@ $$
 .center.width-80[![DAG](figures/computational_graph.png)]
 ]
 ]
+
+---
+# HEP Example: Likelihood gradients
+
+.footnote[Example adapted from [Lukas Heinrich's PyHEP 2020 tutorial](https://indico.cern.ch/event/882824/timetable/#45-introduction-to-automatic-d)]
+
+.kol-1-2.center[
+.width-90[![carbon_plot_MLE_grads](figures/carbon_plot_MLE_grads.png)]
+]
+.kol-1-2.center[
+.width-90[![MLE_grad_map_full](figures/MLE_grad_map_full.png)]
+]
+
+.bold.center[Having access to the gradients makes the fit orders of magnitude faster than finite difference]
+
+---
+# HEP Example: Likelihood gradients
+
+.footnote[Example adapted from [Lukas Heinrich's PyHEP 2020 tutorial](https://indico.cern.ch/event/882824/timetable/#45-introduction-to-automatic-d)]
+
+.kol-1-2.center[
+.width-90[![carbon_plot_MLE_grads](figures/carbon_plot_MLE_grads.png)]
+]
+.kol-1-2.center[
+.width-90[![MLE_grad_map_full](figures/MLE_grad_map.png)]
+]
+
+.bold.center[Having access to the gradients makes the fit orders of magnitude faster than finite difference]
 
 ---
 # Differentiable ecosystem
