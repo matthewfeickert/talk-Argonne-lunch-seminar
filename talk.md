@@ -473,15 +473,42 @@ TODO: Make this an animated GIF
 
 ---
 # New art: analysis as a differentiable program
-.kol-4-5[
+.kol-1-2[
 - Provide differentiable analogue to histograms with kernel density estimation or softmax
-- GIF: `neos` 3 bin observable with KDE optimized with systematics w.r.t. $\mathrm{CL}_{s}$
+   - Need smooth change compares to abrupt changes in binned yields
+<!-- - Make profile-likelihood differentiable with [fixed-point differentiation](https://implicit-layers-tutorial.org/implicit_functions/) -->
+- Samples fed into NN that produces observable (NN output) that can be binned.
+- Construct `pyhf` model with observable and perform inference to get $CL_s$ for POI.
+- Backpropagate the $CL_s$ to update weights for NN.
+
+<br>
+.center.width-40[[![neos_logo](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/neos_logo.png)](https://github.com/gradhep/neos)]
+.footnote[Graphics from [Nathan Simpson's PyHEP 2020 talk](https://indico.cern.ch/event/882824/timetable/#46-neos-physics-analysis-as-a)]
 ]
-.kol-1-5.center[
-.width-100[[![neos_logo](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/neos_logo.png)](https://github.com/gradhep/neos)]
+.kol-1-2.center[
+.width-40[[![neoflow](figures/kde_bins.gif)](https://indico.cern.ch/event/882824/timetable/#46-neos-physics-analysis-as-a)]
+.width-100[[![neoflow](figures/neoflow.png)](https://indico.cern.ch/event/882824/timetable/#46-neos-physics-analysis-as-a)]
 ]
 
+---
+# New art: analysis as a differentiable program
+
+.center[`neos` 3 bin observable (NN output) with KDE optimized with systematics w.r.t. $\mathrm{CL}_{s}$]
 .center.width-100[[![neos_gif](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/pyhf_3.gif)](https://github.com/gradhep/neos)]
+
+.kol-1-3[
+- 3 regions are decision boundaries of NN output
+- 3 bins $\to$ 3 regions
+]
+.kol-1-3[
+- $\mathrm{CL}_{s}$ value minimized as goal of NN
+]
+.kol-1-3[
+- Observations in NN output
+   - $0$: Background-like
+   - $1$: Signal-like
+- Binned contents channel input for `pyhf` model
+]
 
 ---
 # Differentiable ecosystem
