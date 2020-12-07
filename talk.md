@@ -151,14 +151,14 @@ TODO: Revise example with graphviz
 <br>
 .kol-1-2[
 - .bold[Forward] mode
-- Column wise evaluation of jacobian
+- Column wise evaluation of Jacobian
    - Jacobian-vector products
    - Execution time scales with input parameters
    - Example: few variables into very high dimensional spaces $\mathbb{R} \to \mathbb{R}^{100}$
 ]
 .kol-1-2[
 - .bold[Reverse] mode
-- Row wise evaluation of jacobian
+- Row wise evaluation of Jacobian
    - vector-Jacobian products
    - Execution time scales with output parameters
    - Example: scalar maps from very high-dimensional spaces $\mathbb{R}^{100} \to \mathbb{R}$
@@ -179,7 +179,7 @@ TODO: Revise example with graphviz
    - binning, sorting, cuts
 - Resulting system can be optimized end-to-end using efficient gradient-based optimization algorithms
    - Exploit advances in deep learning
-- Enables .italic[efficient] computation of gradients and jacobians
+- Enables .italic[efficient] computation of gradients and Jacobians
    - Large benefit to statistical inference
 ]
 .kol-1-2[
