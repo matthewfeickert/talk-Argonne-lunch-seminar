@@ -493,7 +493,7 @@ TODO: Make this an animated GIF
 ---
 # New art: analysis as a differentiable program
 
-.center[`neos` 3 bin observable (NN output) with KDE optimized with systematics w.r.t. $\mathrm{CL}_{s}$]
+.center[`neos` 3 bin KDE transformed observable (NN output) optimized with systematics w.r.t. $\mathrm{CL}_{s}$]
 .center.width-100[[![neos_gif](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/pyhf_3.gif)](https://github.com/gradhep/neos)]
 
 .kol-1-3[
