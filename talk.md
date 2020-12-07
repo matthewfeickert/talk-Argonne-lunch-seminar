@@ -143,14 +143,29 @@ TODO: Revise example with graphviz
 ]
 
 ---
-# Automatic Differentiation: Forward mode
+# Automatic Differentiation: Forward and Reverse
 
-- Forward
+.center[Performing maps $f: \mathbb{R}^{m} \to \mathbb{R}^{n}$]
+<br>
+.center[aka, "wide" vs. "tall" transformations]
+<br>
+.kol-1-2[
+- .bold[Forward] mode
+- Column wise evaluation of jacobian
+   - Jacobian-vector products
+   - Execution time scales with input parameters
+   - Example: few variables into very high dimensional spaces $\mathbb{R} \to \mathbb{R}^{100}$
+]
+.kol-1-2[
+- .bold[Reverse] mode
+- Row wise evaluation of jacobian
+   - vector-Jacobian products
+   - Execution time scales with output parameters
+   - Example: scalar maps from very high-dimensional spaces $\mathbb{R}^{100} \to \mathbb{R}$
+]
 
----
-# Automatic Differentiation: Reverse mode
-
-- Reverse
+<br>
+.center[Allows for efficient computation depending on dimensionality]
 
 ---
 # Differentiable Programming
