@@ -455,10 +455,23 @@ $$
 ---
 # Differentiable ecosystem
 
-- NEOS
-- gradhep
-- ACTS
-- others
+.kol-1-3.center[
+.width-100[[![gradhep](https://avatars1.githubusercontent.com/u/65067820)](https://hepsoftwarefoundation.org/activities/differentiablecomputing.html)]
+
+gradhep
+]
+.kol-1-3.center[
+.width-100[[![neos_logo](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/neos_logo.png)](https://github.com/gradhep/neos)]
+
+neos
+]
+.kol-1-3.center[
+<br><br>
+.width-100[[![MLE_grad_map_full](figures/Acts_autodiff_talk.png)](https://indico.cern.ch/event/941278/contributions/4084835/)]
+
+<br><br>
+ACTS
+]
 
 ---
 # Scalable
