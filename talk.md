@@ -191,7 +191,7 @@ TODO: Revise example with graphviz
 
 ---
 class: focus-slide, center
-# Case study
+# Case study: Autodiff improving analyses
 
 .huge.bold.center[Application of autodiff in `pyhf`]
 
@@ -354,9 +354,9 @@ $$
 
 ---
 class: focus-slide, center
-# Familiar (toy) example
+# Enable new techniques with autodiff
 
-.huge.bold.center[Optimizing a cut for an analysis]
+.huge.bold.center[Familiar (toy) example: Optimizing a cut for an analysis]
 
 ---
 # Discriminate signal and background
