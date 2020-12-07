@@ -180,13 +180,33 @@ class: focus-slide, center
 ---
 # Compare hard cuts vs. differentiable
 
-- Words go here
+<br>
 
-.kol-1-2.center[
-.width-100[![signal_background_stacked](figures/signal_background_stacked.png)]
+.kol-1-2[
+- For hard cuts the significance was calculated by applying the cut and then using the remaining $S$ and $B$ events
+- But for the differentiable model there aren't cuts, so approximate cuts with the sigmoid approach and weights
+- Comparing the two methods shows good agreement
+- Can see that the approximation to the hard cuts improves with larger $\alpha$
+   - But can become unstable, so tunable
 ]
 .kol-1-2[
 .width-100[![significance_scan_compare](figures/significance_scan_compare.png)]
+]
+
+---
+# Compare hard cuts vs. differentiable
+
+<br>
+
+.kol-1-2[
+- For hard cuts the significance was calculated by applying the cut and then using the remaining $S$ and $B$ events
+- But for the differentiable model there aren't cuts, so approximate cuts with the sigmoid approach and weights
+- Comparing the two methods shows good agreement
+- Can see that the approximation to the hard cuts improves with larger $\alpha$
+   - But can become unstable, so tunable
+]
+.kol-1-2[
+.width-100[![significance_scan_compare_high_alpha](figures/significance_scan_compare_high_alpha.png)]
 ]
 
 
@@ -488,6 +508,10 @@ Please checkout the many resources we have starting with the [website](https://s
 .width-70[[![iris-hep_logo](assets/logos/logo_IRIS-HEP.png)](https://iris-hep.org/)]
 ]
 ]
+---
+# References
+
+1. Lukas Heinrich, .italic[[Distributed Gradients for Differentiable Analysis](https://indico.cern.ch/event/960587/contributions/4070325/)], [Future Analysis Systems and Facilities Workshop](https://indico.cern.ch/event/960587/), 2020.
 
 ---
 # References
