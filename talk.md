@@ -121,10 +121,26 @@ Provide constraints on models through setting best limits
 ---
 # Automatic Differentiation
 
+.kol-3-5[
 - Provide gradients of numerical functions to machine precision
 - Build computational graph of the calculation
 - Nodes represent operations, edges represent flow of gradients
 - Apply the chain rule to operations
+
+<br>
+$$
+f(a,b) = a^{2} \sin(ab)
+$$
+<br>
+$$
+\frac{df}{da} = \frac{\partial c}{\partial a} \frac{\partial f}{\partial c} + \frac{\partial d}{\partial a} \frac{\partial e}{\partial d} \frac{\partial f}{\partial e}
+$$
+
+TODO: Revise example with graphviz
+]
+.kol-2-5.center[
+.width-100[[![autodiff_graph](figures/autodiff_graph.png)](https://indico.cern.ch/event/941278/contributions/4084835/)]
+]
 
 ---
 # Differentiable Programming
@@ -544,6 +560,13 @@ $$
    - Metadiff can allow for differentiating through systems using FaaS
 - Ongoing areas of rapid work in IRIS-HEP, gradhep, and CERN
    - Growing ecosystem of work and tools
+
+.kol-1-2.center[
+.width-45[![MLE_grad_map_full](figures/MLE_grad_map_full.png)]
+]
+.kol-1-2.center[
+.width-45[![MLE_grad_map_full](figures/MLE_grad_map_full.png)]
+]
 
 ---
 class: end-slide, center
