@@ -170,8 +170,8 @@ class: focus-slide, center
 .center[$\left(1 + e^{-\alpha(x-c)}\right)^{-1}$]
 
 - $\alpha$ tunable parameter for steepness
-- Event far from cut: $w \to 0$
-- Event close to cut: $w \to 1$
+- Event far .italic[below] cut: $w \to 0$
+- Event far .italic[above] cut: $w \to 1$
 ]
 .kol-1-2[
 .width-100[![sigmoid_event_weights](figures/sigmoid_event_weights.png)]
@@ -189,7 +189,7 @@ class: focus-slide, center
 - Can see that the approximation to the hard cuts improves with larger $\alpha$
    - But can become unstable, so tunable
 ]
-.kol-1-2[
+.kol-1-2.center[
 .width-100[![significance_scan_compare](figures/significance_scan_compare.png)]
 ]
 
@@ -205,8 +205,39 @@ class: focus-slide, center
 - Can see that the approximation to the hard cuts improves with larger $\alpha$
    - But can become unstable, so tunable
 ]
-.kol-1-2[
+.kol-1-2.center[
 .width-100[![significance_scan_compare_high_alpha](figures/significance_scan_compare_high_alpha.png)]
+]
+
+---
+# Accessing the gradient
+
+.kol-2-5[
+<br><br>
+- Most importantly though, with the differentiable model we have access to the gradient
+   - $\partial_{x} f(x)$
+- So can find the maximum significance at the point where the gradient of the significance is zero
+   - $\partial_{x} f(x) = 0$
+- With the gradient in hand this cries out for automated optimization!
+]
+.kol-3-5.center[
+.width-90[![significance_gradient](figures/significance_gradient.png)]
+]
+
+---
+# Automated optimzation
+
+.kol-2-5[
+<br><br>
+- With a simple gradient descent algorithm can easily automate the significance optimization
+- For this toy example, obviously less efficient then cut and count scan
+- Gradient methods apply well in higher dimensional problems
+- Allows for the cut to become a tunable parameter of the larger analysis
+]
+.kol-3-5.center[
+.width-100[![automated_optimization](figures/automated_optimization.png)]
+
+TODO: Make this an animated GIF
 ]
 
 
