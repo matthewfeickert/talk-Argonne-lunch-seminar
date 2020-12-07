@@ -478,11 +478,10 @@ ACTS
 ]
 
 ---
-# Scalable
+class: focus-slide, center
+# Scalable solutions
 
-- ServiceX
-- Deploying `pyhf`
-- Running GPU fits
+.huge.bold.center[Differentiable analyses at LHC scale]
 
 ---
 # Analysis Systems through lens of stat inference
