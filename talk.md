@@ -382,6 +382,13 @@ $$
 ]
 ]
 
+---
+# Differentiable ecosystem
+
+- NEOS
+- gradhep
+- ACTS
+- others
 
 ---
 # Scalable
@@ -471,6 +478,18 @@ $$
 ]
 ]
 
+---
+# Summary
+
+- Automatic differentiation gives a powerful tool in the form of differentiable programming
+   - Exploitation of gradient for optimization
+   - End-to-end optimization of systems and analyses
+- Scalable workflows are a requirement for LHC scale analyses
+   - Distributed Functions as a Service offer powerful scaling
+   - Heterogeneous architectures can be employed
+   - Metadiff can allow for differentiating through systems using FaaS
+- Ongoing areas of rapid work in IRIS-HEP, gradhep, and CERN
+   - Growing ecosystem of work and tools
 
 ---
 class: end-slide, center
