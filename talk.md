@@ -475,7 +475,7 @@ TODO: Make this an animated GIF
 # New art: analysis as a differentiable program
 .kol-1-2[
 - Provide differentiable analogue to histograms with kernel density estimation or softmax
-   - Need smooth change compares to abrupt changes in binned yields
+   - Need smooth change compared to abrupt changes in binned yields
 <!-- - Make profile-likelihood differentiable with [fixed-point differentiation](https://implicit-layers-tutorial.org/implicit_functions/) -->
 - Samples fed into NN that produces observable (NN output) that can be binned.
 - Construct `pyhf` model with observable and perform inference to get $\mathrm{CL}_{s}$ for POI.
