@@ -472,6 +472,18 @@ TODO: Make this an animated GIF
 ]
 
 ---
+# New art: analysis as a differentiable program
+.kol-4-5[
+- Provide differentiable analogue to histograms with kernel density estimation or softmax
+- GIF: `neos` 3 bin observable optimized with systematics w.r.t. $\mathrm{CL}_{s}$
+]
+.kol-1-5.center[
+.width-100[[![neos_logo](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/neos_logo.png)](https://github.com/gradhep/neos)]
+]
+
+.center.width-100[[![neos_gif](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/pyhf_3.gif)](https://github.com/gradhep/neos)]
+
+---
 # Differentiable ecosystem
 
 .kol-1-3.center[
@@ -482,7 +494,7 @@ gradhep
 .kol-1-3.center[
 .width-100[[![neos_logo](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/neos_logo.png)](https://github.com/gradhep/neos)]
 
-neos
+[neos](https://github.com/gradhep/neos), [INFERNO](https://inspirehep.net/literature/1677673)
 ]
 .kol-1-3.center[
 <br><br>
@@ -490,6 +502,11 @@ neos
 
 <br><br><br>
 ACTS
+]
+
+<br>
+.kol-1-1[
+.bold.center[Groups, libraries, and applications growing rapidly]
 ]
 
 ---
