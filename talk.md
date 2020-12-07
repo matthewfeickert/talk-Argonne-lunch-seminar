@@ -43,35 +43,34 @@ NYU
 ]
 .grid[
 .kol-1-4.center[
-.circle.width-45[![Mark](https://avatars2.githubusercontent.com/u/20069906)]
+.circle.width-45[![Nathan](https://avatars2.githubusercontent.com/u/49782545)]
 
-[Mark Neubauer](https://github.com/lukasheinrich)
+[Nathan Simpson](https://github.com/phinate)
 
-Illinois
+Lund University
 ]
 .kol-1-4.center[
-.circle.width-45[![Sabine](https://avatars2.githubusercontent.com/u/28776248)]
+.circle.width-45[![Ben](https://avatars2.githubusercontent.com/u/8229875)]
 
+[Ben Galewsky](https://bengalewsky.github.io/about/)
 
-[Sabine Kraml](http://www.kraml.net/)
-
-LPSC, Grenoble
+NCSA/IRIS-HEP
 ]
 .kol-1-4.center[
-.circle.width-45[![Wolfgang](https://avatars2.githubusercontent.com/u/5710451)]
+.circle.width-50[![Ricardo](https://ricardorocha.io/images/avatar.png)]
 
 
-[Wolfgang Waltenberger](https://github.com/WolfgangWaltenberger)
+[Ricardo Rocha](https://ricardorocha.io/)
 
-HEPHY ÖAW
+CERN
 ]
 .kol-1-4.center[
-.circle.width-45[![Gael](figures/collaborators/alguero.jpg)]
+.circle.width-45[![Sinclert](https://avatars0.githubusercontent.com/u/6978377)]
 
 
-[Gaël Alguero](https://github.com/Ga0l)
+[Sinclert Pérez](https://sinclert.github.io/)
 
-LPSC, Grenoble
+NYU
 ]
 ]
 
