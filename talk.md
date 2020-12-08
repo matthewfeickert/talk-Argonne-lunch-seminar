@@ -173,8 +173,8 @@ Provide constraints on models through setting best limits
 - Build computational graph of the calculation
 - Nodes represent operations, edges represent flow of gradients
 - Apply the chain rule to operations
-
-<br>
+   - Can traverse the graph in forward or reverse modes depending on the relative dimensions of input and output for efficient computation
+   
 $$
 f(a,b) = a^{2} \sin(ab)
 $$
@@ -188,31 +188,6 @@ $$
 .kol-2-5.center[
 .width-100[[![autodiff_graph](figures/autodiff_graph.png)](https://indico.cern.ch/event/941278/contributions/4084835/)]
 ]
-
----
-# Automatic Differentiation: Forward and Reverse
-
-.center[Performing maps $f: \mathbb{R}^{m} \to \mathbb{R}^{n}$]
-<br>
-.center[aka, "wide" vs. "tall" transformations]
-<br>
-.kol-1-2[
-- .bold[Forward] mode
-- Column wise evaluation of Jacobian
-   - Jacobian-vector products
-   - Execution time scales with input parameters
-   - Example: few variables into very high dimensional spaces $\mathbb{R} \to \mathbb{R}^{100}$
-]
-.kol-1-2[
-- .bold[Reverse] mode
-- Row wise evaluation of Jacobian
-   - vector-Jacobian products
-   - Execution time scales with output parameters
-   - Example: scalar maps from very high-dimensional spaces $\mathbb{R}^{100} \to \mathbb{R}$
-]
-
-<br>
-.center[Allows for efficient computation depending on dimensionality]
 
 ---
 # Differentiable Programming
@@ -739,6 +714,31 @@ Differentiating through PyTorch, JAX, and TensorFlow using FaaS
 class: end-slide, center
 
 .large[Backup]
+
+---
+# Automatic Differentiation: Forward and Reverse
+
+.center[Performing maps $f: \mathbb{R}^{m} \to \mathbb{R}^{n}$]
+<br>
+.center[aka, "wide" vs. "tall" transformations]
+<br>
+.kol-1-2[
+- .bold[Forward] mode
+- Column wise evaluation of Jacobian
+   - Jacobian-vector products
+   - Execution time scales with input parameters
+   - Example: few variables into very high dimensional spaces $\mathbb{R} \to \mathbb{R}^{100}$
+]
+.kol-1-2[
+- .bold[Reverse] mode
+- Row wise evaluation of Jacobian
+   - vector-Jacobian products
+   - Execution time scales with output parameters
+   - Example: scalar maps from very high-dimensional spaces $\mathbb{R}^{100} \to \mathbb{R}$
+]
+
+<br>
+.center[Allows for efficient computation depending on dimensionality]
 
 ---
 # HistFactory Template
