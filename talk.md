@@ -91,7 +91,7 @@ class: focus-slide, center
 .huge.center.bold[Show live (toy) example of how easy it can be to get started] -->
 
 ---
-# Goals of physics analysis at the LHC
+# Goals of Physics Analysis at the LHC
 
 .kol-1-1[
 .kol-1-3.center[
@@ -113,8 +113,8 @@ Provide constraints on models through setting best limits
 ]
 
 - All require .bold[building statistical models] and .bold[fitting models] to data to perform statistical inference
-- Model complexity can be huge for complicated searches
-- **Problem:** Time to fit can be .bold[literally days]
+- Model complexity can be huge for complicated searches (hundreds of parameters + systematics)
+- **Problem:** Time to fit can be .bold[literally days] (for MLE fits, worse if pseudoexperiments required)
 - .blue[Goal:] Empower analysts with fast fits and expressive models
 
 
@@ -275,7 +275,7 @@ Mathematical grammar for a simultaneous fit with
 ]
 
 ---
-# Machine Learning Frameworks for Computation
+# Open Source Industry Tools for Computation
 
 .grid[
 .kol-2-3[
@@ -304,7 +304,7 @@ Mathematical grammar for a simultaneous fit with
 ]
 
 ---
-# Automatic differentiation
+# Automatic Differentiation of `pyhf` Models
 
 With tensor library backends gain access to _exact (higher order) derivatives_ &mdash; accuracy is only limited by floating point precision
 
@@ -325,7 +325,7 @@ $$
 ]
 
 ---
-# HEP Example: Likelihood gradients
+# HEP Example: Likelihood Gradients
 
 .footnote[Example adapted from [Lukas Heinrich's PyHEP 2020 tutorial](https://indico.cern.ch/event/882824/timetable/#45-introduction-to-automatic-d)]
 
@@ -339,7 +339,7 @@ $$
 .bold.center[Having access to the gradients makes the fit orders of magnitude faster than finite difference]
 
 ---
-# HEP Example: Likelihood gradients
+# HEP Example: Likelihood Gradients
 
 .footnote[Example adapted from [Lukas Heinrich's PyHEP 2020 tutorial](https://indico.cern.ch/event/882824/timetable/#45-introduction-to-automatic-d)]
 
@@ -359,7 +359,7 @@ class: focus-slide, center
 .huge.bold.center[Familiar (toy) example: Optimizing a cut for an analysis]
 
 ---
-# Discriminate signal and background
+# Discriminate Signal and Background
 
 - Counting experiment for presence of signal process
 - Place discriminate cut on observable $x$ to maximize significance
@@ -390,7 +390,7 @@ class: focus-slide, center
 .center[Significance: $\sqrt{2 (S+B) \log(1 + \frac{S}{B})-2S}$]
 
 ---
-# Differentiable approach
+# Differentiable Approach
 
 <br>
 
@@ -409,7 +409,7 @@ class: focus-slide, center
 ]
 
 ---
-# Compare hard cuts vs. differentiable
+# Compare Hard Cuts vs. Differentiable
 
 <br>
 
@@ -425,7 +425,7 @@ class: focus-slide, center
 ]
 
 ---
-# Compare hard cuts vs. differentiable
+# Compare Hard Cuts vs. Differentiable
 
 <br>
 
@@ -441,7 +441,7 @@ class: focus-slide, center
 ]
 
 ---
-# Accessing the gradient
+# Accessing the Gradient
 
 .kol-2-5[
 <br><br>
@@ -456,7 +456,7 @@ class: focus-slide, center
 ]
 
 ---
-# Automated optimzation
+# Automated Optimzation
 
 .kol-2-5[
 <br><br>
@@ -472,7 +472,7 @@ TODO: Make this an animated GIF
 ]
 
 ---
-# New art: analysis as a differentiable program
+# New Art: Analysis as a Differentiable Program
 .kol-1-2[
 - Provide differentiable analogue to histograms with kernel density estimation or softmax
    - Need smooth change compared to abrupt changes in binned yields
@@ -491,7 +491,7 @@ TODO: Make this an animated GIF
 ]
 
 ---
-# New art: analysis as a differentiable program
+# New Art: Analysis as a Differentiable Program
 
 .center[`neos` 3 bin KDE transformed observable (NN output) optimized with systematics w.r.t. $\mathrm{CL}_{s}$]
 .center.width-100[[![neos_gif](https://raw.githubusercontent.com/gradhep/neos/master/nbs/assets/pyhf_3.gif)](https://github.com/gradhep/neos)]
@@ -503,7 +503,7 @@ TODO: Make this an animated GIF
    - $[0.67, 1.0]$ bin $\to$ top left region
 ]
 .kol-1-3[
-- From KDE of NN output form 1 channel with 2 samples and 3 bins `pyhf` model
+- From KDE of NN output form `pyhf` model with 1 channel with 2 samples and 3 bins
 - $\mathrm{CL}_{s}$ value minimized as goal of NN
 ]
 .kol-1-3[
@@ -514,7 +514,7 @@ TODO: Make this an animated GIF
 ]
 
 ---
-# Differentiable ecosystem
+# Differentiable Ecosystem
 
 .kol-1-3.center[
 .width-100[[![gradhep](https://avatars1.githubusercontent.com/u/65067820)](https://hepsoftwarefoundation.org/activities/differentiablecomputing.html)]
@@ -546,7 +546,7 @@ class: focus-slide, center
 .huge.bold.center[Differentiable analyses at LHC scale]
 
 ---
-# Analysis Systems through lens of stat inference
+# Analysis Systems through Lens of Stat Inference
 
 .center.width-80[![cabinetry_vertical_slice](figures/cabinetry-vertical-slice.png)]
 
@@ -568,7 +568,7 @@ class: focus-slide, center
 ]
 
 ---
-# Open fields of exploration
+# Open Fields of Exploration
 
 .kol-1-2[
 <br>
@@ -602,7 +602,7 @@ class: focus-slide, center
 - Kubernetes assumes containers (containerd, Docker), but the other environments can just use conda or pip
 
 ---
-# funcX example: Distributed fitting
+# funcX Example: Distributed Fitting
 .kol-1-2[
 - [Prototype workflow](https://github.com/BenGalewsky/fitting-as-a-service) for fitting models from `pyhf` pallet for [published ATLAS SUSY 1Lbb analysis](https://www.hepdata.net/record/ins1755298)
    - Currently deployed on [Chicago River HPC cluster](https://indico.cern.ch/event/960587/contributions/4070332/)
