@@ -4,6 +4,8 @@ Talk at the Argonne lunch seminar series on [December 8th, 2020](https://indico.
 
 Viewable online [here](https://matthewfeickert.github.io/talk-Argonne-lunch-seminar/index.html)
 
+Example code runnable on Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewfeickert/talk-Argonne-lunch-seminar/HEAD?urlpath=lab/tree/example_code)
+
 ## Acknowledgments
 
 - [Matthew Feickert](http://www.matthewfeickert.com/) is supported in part by IRIS-HEP
