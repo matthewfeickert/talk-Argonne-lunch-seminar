@@ -125,8 +125,8 @@ Provide constraints on models through setting best limits
 ]
 .kol-2-8[
 <br><br>
-- Exact: .bold[Yes]
-- Flexible: No
+- Exact: .blue[Yes]
+- Flexible: .red[No]
 ]
 
 ---
@@ -143,8 +143,8 @@ Provide constraints on models through setting best limits
 ]
 .kol-2-8[
 <br><br>
-- Exact: No
-- Flexible: .bold[Yes]
+- Exact: .red[No]
+- Flexible: .blue[Yes]
 ]
 
 ---
@@ -161,8 +161,8 @@ Provide constraints on models through setting best limits
 ]
 .kol-2-8[
 <br><br>
-- Exact: .bold[Yes]
-- Flexible: .bold[Yes]
+- Exact: .blue[Yes]
+- Flexible: .blue[Yes]
 ]
 
 ---
@@ -174,7 +174,7 @@ Provide constraints on models through setting best limits
 - Nodes represent operations, edges represent flow of gradients
 - Apply the chain rule to operations
    - Can traverse the graph in forward or reverse modes depending on the relative dimensions of input and output for efficient computation
-   
+
 $$
 f(a,b) = a^{2} \sin(ab)
 $$
