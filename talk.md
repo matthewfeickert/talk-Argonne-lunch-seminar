@@ -74,12 +74,6 @@ NYU
 ]
 ]
 
----
-class: focus-slide, center
-# Reviewer Note
-
-.huge.bold[If you're reading this before 2020-12-08 these slides might get revised for better clarity, timing, and figure quality]
-
 <!-- ---
 class: focus-slide, center
 # Goals for today's discussion
@@ -122,7 +116,7 @@ Provide constraints on models through setting best limits
 
 - As we'll see later, having access to the gradient while performing minimization is highly beneficial!
 - Can imagine multiple ways of arriving at gradients for computational functions
-   - But want them to be both .bold[accurate] and .bold[flexible]
+   - But want them to be both .bold[exact] and .bold[flexible]
 
 .center.width-25[![carbon_f_x](figures/carbon_f_x.png)]
 .kol-6-8[
@@ -140,7 +134,7 @@ Provide constraints on models through setting best limits
 
 - As we'll see later, having access to the gradient while performing minimization is highly beneficial!
 - Can imagine multiple ways of arriving at gradients for computational functions
-   - But want them to be both .bold[accurate] and .bold[flexible]
+   - But want them to be both .bold[exact] and .bold[flexible]
 
 .center.width-25[![carbon_f_x](figures/carbon_f_x.png)]
 .kol-6-8[
@@ -158,7 +152,7 @@ Provide constraints on models through setting best limits
 
 - As we'll see later, having access to the gradient while performing minimization is highly beneficial!
 - Can imagine multiple ways of arriving at gradients for computational functions
-   - But want them to be both .bold[accurate] and .bold[flexible]
+   - But want them to be both .bold[exact] and .bold[flexible]
 
 .center.width-25[![carbon_f_x](figures/carbon_f_x.png)]
 .kol-6-8[
@@ -189,7 +183,7 @@ $$
 \frac{df}{da} = \frac{\partial c}{\partial a} \frac{\partial f}{\partial c} + \frac{\partial d}{\partial a} \frac{\partial e}{\partial d} \frac{\partial f}{\partial e}
 $$
 
-TODO: Revise example with graphviz
+<!-- TODO: Revise example with graphviz -->
 ]
 .kol-2-5.center[
 .width-100[[![autodiff_graph](figures/autodiff_graph.png)](https://indico.cern.ch/event/941278/contributions/4084835/)]
@@ -521,7 +515,7 @@ class: focus-slide, center
 .kol-3-5.center[
 .width-100[![automated_optimization](figures/automated_optimization.png)]
 
-TODO: Make this an animated GIF
+<!-- TODO: Make this an animated GIF -->
 ]
 
 ---
@@ -651,7 +645,7 @@ class: focus-slide, center
 
 .center.width-100[![infrastructure_perspective](figures/infrastructure_perspective.png)]
 <br>
-- funcX can be deployed to Kubernetes, HTCondor, SLURM, and most other popular HTC environments
+- funcX can be deployed to .bold[Kubernetes], .bold[HTCondor], .bold[SLURM], and most other popular HTC environments
 - Kubernetes assumes containers (containerd, Docker), but the other environments can just use conda or pip
 
 ---
@@ -731,7 +725,7 @@ Differentiating through PyTorch, JAX, and TensorFlow using FaaS
 - Scalable workflows are a requirement for LHC scale analyses
    - Distributed .bold[Functions as a Service] offer powerful scaling
    - Heterogeneous architectures can be employed
-   - Metadiff can allow for differentiating through systems using FaaS
+   - Metadiff can allow for .bold[differentiating across systems] using FaaS
 - Ongoing areas of rapid work in IRIS-HEP, gradhep, and CERN
    - Growing .bold[ecosystem] of work and tools
 
