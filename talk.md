@@ -54,10 +54,10 @@ Lund University
 
 [Ben Galewsky](https://bengalewsky.github.io/about/)
 
-NCSA/IRIS-HEP
+NCSA/Illinois
 ]
 .kol-1-4.center[
-.circle.width-50[![Ricardo](https://ricardorocha.io/images/avatar.png)]
+.circle.width-55[![Ricardo](https://ricardorocha.io/images/avatar.png)]
 
 
 [Ricardo Rocha](https://ricardorocha.io/)
@@ -117,6 +117,59 @@ Provide constraints on models through setting best limits
 - **Problem:** Time to fit can be .bold[literally days] (for MLE fits, worse if pseudoexperiments required)
 - .blue[Goal:] Empower analysts with fast fits and expressive models
 
+---
+# Gradients as Computational Tools
+
+- As we'll see later, having access to the gradient while performing minimization is highly beneficial!
+- Can imagine multiple ways of arriving at gradients for computational functions
+   - But want them to be both .bold[accurate] and .bold[flexible]
+
+.center.width-25[![carbon_f_x](figures/carbon_f_x.png)]
+.kol-6-8[
+.bold.center[Symbolic]
+.center.width-100[![carbon_fprime_symbolic](figures/carbon_fprime_symbolic.png)]
+]
+.kol-2-8[
+<br><br>
+- Exact: .bold[Yes]
+- Flexible: No
+]
+
+---
+# Gradients as Computational Tools
+
+- As we'll see later, having access to the gradient while performing minimization is highly beneficial!
+- Can imagine multiple ways of arriving at gradients for computational functions
+   - But want them to be both .bold[accurate] and .bold[flexible]
+
+.center.width-25[![carbon_f_x](figures/carbon_f_x.png)]
+.kol-6-8[
+.bold.center[Numeric]
+.center.width-70[![carbon_fprime_numeric](figures/carbon_fprime_numeric.png)]
+]
+.kol-2-8[
+<br><br>
+- Exact: No
+- Flexible: .bold[Yes]
+]
+
+---
+# Gradients as Computational Tools
+
+- As we'll see later, having access to the gradient while performing minimization is highly beneficial!
+- Can imagine multiple ways of arriving at gradients for computational functions
+   - But want them to be both .bold[accurate] and .bold[flexible]
+
+.center.width-25[![carbon_f_x](figures/carbon_f_x.png)]
+.kol-6-8[
+.bold.center[Automatic]
+.center.width-80[![carbon_fprime_automatic](figures/carbon_fprime_automatic.png)]
+]
+.kol-2-8[
+<br><br>
+- Exact: .bold[Yes]
+- Flexible: .bold[Yes]
+]
 
 ---
 # Automatic Differentiation
