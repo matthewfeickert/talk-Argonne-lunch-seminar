@@ -221,13 +221,13 @@ $$
 
 .grid[
 .kol-1-2[
-- Writing fully differentiable programs
-- Replace non-differentiable operations with differentiable analogues
-   - binning, sorting, cuts
+- Allows writing fully differentiable programs that are efficient and accurate
 - Resulting system can be optimized end-to-end using efficient gradient-based optimization algorithms
    - Exploit advances in deep learning
 - Enables .italic[efficient] computation of gradients and Jacobians
    - Large benefit to statistical inference
+- Replace non-differentiable operations with differentiable analogues
+   - Binning, sorting, cuts
 ]
 .kol-1-2[
 .center.width-100[[![Snowmass_LOI](figures/Snowmass_LOI.png)](https://www.snowmass21.org/docs/files/summaries/CompF/SNOWMASS21-CompF5_CompF3_Gordon_Watts-046.pdf)]
@@ -287,38 +287,36 @@ $$
 f\left(\vec{n}, \vec{a}\middle|\vec{\eta}, \vec{\chi}\right) = \color{blue}{\prod\_{c \\,\in\\, \textrm{channels}} \prod\_{b \\,\in\\, \textrm{bins}\_c} \textrm{Pois} \left(n\_{cb} \middle| \nu\_{cb}\left(\vec{\eta}, \vec{\chi}\right)\right)} \\,\color{red}{\prod\_{\chi \\,\in\\, \vec{\chi}} c\_{\chi} \left(a\_{\chi}\middle|\chi\right)}
 $$
 
+<br>
 Mathematical grammar for a simultaneous fit with
 
 - .blue[multiple "channels"] (analysis regions, (stacks of) histograms)
 - each region can have .blue[multiple bins]
 - coupled to a set of .red[constraint terms]
 
+<br>
 .center[.bold[This is a _mathematical_ representation!] Nowhere is any software spec defined]
-.center[.bold[Until now] (2018), the only implementation of HistFactory has been in [`ROOT`](https://root.cern.ch/)]
-
-.bold[`pyhf`: HistFactory in pure Python]
-.center.width-40[[![pyhf_PyPI](figures/pyhf_PyPI.png)](https://pypi.org/project/pyhf/)]
+.center[.bold[Until recently] (2018), the only implementation of HistFactory has been in [`ROOT`](https://root.cern.ch/)]
 
 ---
 # `pyhf`: HistFactory in pure Python
-<!--  -->
-.kol-1-2.width-95[
+
+.kol-2-3[
+<br>
 - First non-ROOT implementation of the HistFactory p.d.f. template
-   - .width-40[[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1169739.svg)](https://doi.org/10.5281/zenodo.1169739)]
-- pure-Python library as second implementation of HistFactory
+   - .width-50[[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1169739.svg)](https://doi.org/10.5281/zenodo.1169739)]
+- pure-Python library with Python and CLI API
   - [`$ pip install pyhf`](https://scikit-hep.org/pyhf/installation.html#install-from-pypi)
   - No dependence on ROOT!
-]
-.kol-1-2.center[
-.width-60[[![pyhf_logo](https://iris-hep.org/assets/logos/pyhf-logo.png)](https://scikit-hep.org/pyhf/)]
-]
-<!--  -->
-.kol-1-1[
 - Open source tool for all of HEP
    - [IRIS-HEP](https://iris-hep.org/projects/pyhf.html) supported Scikit-HEP project
-   - Used for reinterpretation in phenomenology paper (DOI: [10.1007/JHEP04(2019)144](https://inspirehep.net/record/1698425)) and `SModelS`
+   - Used for reinterpretation in phenomenology paper <br>(DOI: [10.1007/JHEP04(2019)144](https://inspirehep.net/record/1698425)) and `SModelS`
    - Used in ATLAS SUSY groups and for internal pMSSM SUSY large scale reinterpretation
    - Maybe your experiment too!
+]
+.kol-1-3.center[
+.width-100[[![pyhf_logo](https://iris-hep.org/assets/logos/pyhf-logo.png)](https://scikit-hep.org/pyhf/)]
+.width-100[[![pyhf_PyPI](figures/pyhf_PyPI.png)](https://pypi.org/project/pyhf/)]
 ]
 
 ---
@@ -327,7 +325,7 @@ Mathematical grammar for a simultaneous fit with
 .grid[
 .kol-2-3[
 - All numerical operations implemented in .bold[tensor backends] through an API of $n$-dimensional array operations
-- Using deep learning frameworks as computational backends allows for .bold[exploitation of auto differentiation (autodiff) and GPU acceleration]
+- Using deep learning frameworks as computational backends allows for .bold[exploitation of autodiff and GPU acceleration]
 - As huge buy in from industry we benefit for free as these frameworks are .bold[continually improved] by professional software engineers (physicists are not)
 
 .kol-1-2.center[
@@ -510,7 +508,7 @@ class: focus-slide, center
 - With a simple gradient descent algorithm can easily automate the significance optimization
 - For this toy example, obviously less efficient then cut and count scan
 - Gradient methods apply well in higher dimensional problems
-- Allows for the cut to become a tunable parameter of the larger analysis
+- Allows for the "cut" to become a parameter that can be differentiated through for the larger analysis
 ]
 .kol-3-5.center[
 .width-100[![automated_optimization](figures/automated_optimization.png)]
