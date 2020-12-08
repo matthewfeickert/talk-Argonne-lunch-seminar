@@ -521,10 +521,10 @@ class: focus-slide, center
 ---
 # New Art: Analysis as a Differentiable Program
 .kol-1-2[
-- Provide differentiable analogue to histograms with kernel density estimation or softmax
+- Provide differentiable analogue to histograms with kernel density estimation (KDE) or softmax
    - Need smooth change compared to abrupt changes in binned yields
 <!-- - Make profile-likelihood differentiable with [fixed-point differentiation](https://implicit-layers-tutorial.org/implicit_functions/) -->
-- Samples fed into NN that produces observable (NN output) that can be binned.
+- Samples fed into NN that produces observable (NN output) KDE transformed and histogrammed.
 - Construct `pyhf` model with observable and perform inference to get $\mathrm{CL}_{s}$ for POI.
 - Backpropagate the $\mathrm{CL}_{s}$ to update weights for NN.
 
