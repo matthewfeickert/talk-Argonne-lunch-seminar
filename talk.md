@@ -445,9 +445,10 @@ class: focus-slide, center
 
 .center[$\left(1 + e^{-\alpha(x-c)}\right)^{-1}$]
 
-- $\alpha$ tunable parameter for steepness
 - Event far .italic[below] cut: $w \to 0$
 - Event far .italic[above] cut: $w \to 1$
+- $\alpha$ tunable parameter for steepness
+   - Larger $\alpha$ more cut-like
 ]
 .kol-1-2[
 .width-100[![sigmoid_event_weights](figures/sigmoid_event_weights.png)]
