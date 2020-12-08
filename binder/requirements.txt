@@ -1,0 +1,4 @@
+pyhf[jax]~=0.5.3
+sympy~=1.7
+matplotlib~=3.3
+pre-commit

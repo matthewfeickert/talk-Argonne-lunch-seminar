@@ -1,0 +1,17 @@
+$ cat benchmarks/gpu/gpu_pytorch.txt 
+# time pyhf cls --backend pytorch HVTWZ_3500.json
+
+{
+    "CLs_exp": [
+        0.07676925199218336,
+        0.17262542362618583,
+        0.3572332455085822,
+        0.6318728762727417,
+        0.879799718293609
+    ],
+    "CLs_obs": 0.25670190274923205
+}
+
+real	1m42.284s
+user	13m6.493s
+sys	0m4.742s
